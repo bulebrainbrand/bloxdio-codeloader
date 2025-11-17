@@ -73,3 +73,16 @@ importData(key)
 */
 exportData(key,uploaddata)
 ```
+
+### LoadCodeBlockManager
+読み込んだcodeblockを識別し、前提となるコードの導入や複数機能の連携の切り替え、モックなどに使えます
+LoadCodeBlockManagerはユーティリティのデザインなので、静的メソッドとしてアクセスしてください
+```js
+/**
+* @param {string} name
+* @returns {void}
+*/
+LoadCodeBlockManager.add(name)
+
+
+```
