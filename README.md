@@ -5,3 +5,20 @@
 ワールドコードを開き、最初にある10数行のものを消して[worldcode.js](worldcode.js)を貼り付けます。
 ## 何が使えるのか？
 ### callback関係
+
+コールバックで発動するコードを追加する際にはこれを使います
+
+```js
+/**
+* @param {String} callbackname
+* @param {String} key
+* @param {Function} code
+* @param {Array(3 number item)} pos 
+*/
+addCallbackCode(name,key,code,pos)
+```
+例:
+```js
+addCallbackCode("tick","test",() => api.log(1),[0,0,0])
+```
+
