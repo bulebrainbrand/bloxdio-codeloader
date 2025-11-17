@@ -4,7 +4,7 @@ const useCallback = [
 
 const loadCodeBlockDataPos = [40000,40000,40000]
 
-const globalDataBase = {}
+let globalDataBase = {}
 
 var importData = (name) => {
   return globalDataBase[name]
