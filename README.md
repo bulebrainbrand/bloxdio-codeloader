@@ -91,3 +91,11 @@ LoadCodeBlockManager.add(name)
 */
 LoadCodeBlockManager.has(name)
 ```
+### onAllCodeLoaded
+オリジナルのコールバックで、全てのcodeblockが読み込まれた時に呼び出されます<br>
+扱いはその他の標準的なコールバックと同じように使えます<br>
+引数は何も渡されません
+
+### その他の機能
+```/reload```でコードをリロードします。
+
