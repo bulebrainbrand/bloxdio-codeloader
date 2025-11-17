@@ -21,4 +21,12 @@ addCallbackCode(name,key,code,pos)
 ```js
 addCallbackCode("tick","test",() => api.log(1),[0,0,0])
 ```
+コールバックを宣言し、コードを追加できるようにするには、ワールドコードの上にあるuseCallbackに名前を追加します
+
+```js
+const useCallback = ["onPlayerJoin","onPlayerClick"]
+```
+
+```/status```で登録されているコールバックなどを見れます。
+### codeblockのロード関連
 
