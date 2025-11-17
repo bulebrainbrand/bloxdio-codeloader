@@ -99,3 +99,4 @@ LoadCodeBlockManager.has(name)
 ### その他の機能
 ```/reload```でコードをリロードします。
 
+[asyncchain](https://github.com/bulebrainbrand/bloxdio-asyncChain)を実装しています
