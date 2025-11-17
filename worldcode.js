@@ -2,7 +2,7 @@ const useCallback = [
 "onPlayerJump","onPlayerLeave","onAllCodeLoaded",
 ]
 
-const loadCodeBlockDataPos = [2850,40,40]
+const loadCodeBlockDataPos = [40000,40000,40000]
 
 const globalDataBase = {}
 
