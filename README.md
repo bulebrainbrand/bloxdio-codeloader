@@ -10,10 +10,11 @@
 
 ```js
 /**
-* @param {String} callbackname
-* @param {String} key
-* @param {Function} code
-* @param {Array(3 number item)} pos 
+* @param {string} callbackname
+* @param {string} key
+* @param {function} code
+* @param {array(3 number item)} pos
+* @returns {void}
 */
 addCallbackCode(name,key,code,pos)
 ```
@@ -30,3 +31,45 @@ const useCallback = ["onPlayerJoin","onPlayerClick"]
 ```/status```で登録されているコールバックなどを見れます。
 ### codeblockのロード関連
 
+読み込みするcodeblockを追加するには、LoadCodeDataManagerを使います
+LoadCodeDataManagerはシングルトンデザインなため、newをつけて使用します
+```js
+
+/**
+* @param {array(3 number item)} pos
+* @returns {void}
+*/
+(new LoadCodeDataManager).add(pos)
+
+/**
+* @param {array(3 number item)} pos
+* @returns {void}
+*/
+(new LoadCodeDataManager).delete(pos)
+
+```
+例えば、以下のコードが書かれたcodeblockの2マス下にあるcodeblockを自動で読み込むようにするには、以下のように書きます
+
+```js
+const [x,y,z] = thisPos
+(new LoadCodeDataManager).add([x,y-2,z])
+```
+
+> [!IMPORTANT]
+>LoadCodeDataManagerには非同期処理が用いられています
+### exportData,importData
+情報をグローバルスコープを汚染せずに受け渡すための機能です
+```js
+/**
+* @param {string} key
+* @returns {any}
+*/
+importData(key)
+
+/**
+* @param {string} key
+* @param {any} upload data
+* @returns {void}
+*/
+exportData(key,uploaddata)
+```
